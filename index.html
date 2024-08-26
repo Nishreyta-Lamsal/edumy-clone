@@ -12,7 +12,7 @@
         }
     
         .shadow-solid-darker-green {
-            box-shadow: 0 4px 0 #4a773c;
+            box-shadow: 0 2px 0 #4a773c;
             /* Solid shadow color */
         }
         .bg-custom-grey{
@@ -35,17 +35,15 @@
     </style>
 </head>
 <body>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
-<nav class="bg-custom-grey h-16 flex items-center justify-between px-4">
-    <!-- Left side: Logo -->
+<nav class="sticky bg-custom-grey h-16 flex items-center justify-between pl-4 pr-4 pt-0">
     <div>
-        <a class="text-white mx-3 text-2xl" href="https://themeforest.net/item/edumy-lms-online-education-course-school-html-template/24648034"><span class="font-bold">envato</span>market</a>
+        <img src="/assets/logo1.png" class="w-6 inline-block -mr-4 ml-6 h-7"/>
+        <a class="text-white mx-3 text-xl" href="https://themeforest.net/item/edumy-lms-online-education-course-school-html-template/24648034"><span class="font-bold">envato</span>market</a>
     </div>
 
-    <!-- Right side: Buy Me Button -->
     <div>
-        <a href="https://themeforest.net/checkout/from_item/24648034?license=regular&amp;support=bundle_6month"><button class="bg-custom-green text-white py-1.5 px-4 rounded shadow-solid-darker-green active:translate-y-1 active:shadow-none">
+        <a href="https://themeforest.net/checkout/from_item/24648034?license=regular&amp;support=bundle_6month"><button class="bg-custom-green text-white py-1 px-4 rounded shadow-solid-darker-green active:translate-y-1 active:shadow-none">
             Buy now
         </button> </a>
     </div>
@@ -56,8 +54,8 @@
         <p class="text-white font-bold inline-block -mx-28 text-2xl"> EDUMY </p>
         <button class="in-line mx-36 bg-custom-blue px-8 py-3 rounded-3xl text-white text-0.5Xl"> LIBRARY </button>
         <input type="text" placeholder="Search for the software or skills you want to learn" class="w-auto inline-block -mx-28 pl-2 pr-44 py-3 rounded-3xl placeholder:text-sm"/>
-        <p class="inline-block mx-72 px-3 text-custom-light-grey"> +(90) 123 456 789 </p>
-        <select id="languages" name="languages" class="inline-block -mx-64 text-custom-light-grey bg-black">
+        <p class="inline-block mx-72 px-3 text-custom-light-grey text-sm"> +(90) 123 456 789 </p>
+        <select id="languages" name="languages" class="inline-block -mx-64 text-custom-light-grey bg-black text-sm">
             <option value="english" selected>English</option>
             <option value="french">French</option>
             <option value="italian">Italian</option>
@@ -67,7 +65,7 @@
     </div>
 </nav>
 <div>
-    <nav class="bg-color-dark-grey p-7">
+    <nav class="bg-color-dark-grey pt-6 pb-3">
         <ul class="flex space-x-16 mx-16 text-custom-light-grey">
             <li>Home</li>
             <li>Courses</li>
@@ -75,12 +73,12 @@
             <li>Pages</li>
             <li>Blog</li>
             <li>Contact</li>
-            <p>
+            <p class="text-sm mt-1 -mb-8">
                 <img src="./assets/instructor.png" alt="Logo" class="w-8 inline-block ml-56">
                 Become an instructor
             </p>
-            <img src="./assets/line.png" class="inline-block w-1 h-8"/>
-            <p>
+            <img src="./assets/line.png" class="inline-block w-1 h-9 mt-1"/>
+            <p class="text-sm mt-1 -mb-8">
                 <img src="assets/login.png" class="w-5 inline-block -ml-11"/>
                 Login/Register
             </p>
@@ -88,6 +86,18 @@
         <p> </p>
     </nav>
 </div>
+
+<div class="relative">
+    <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+        <p class="text-6xl">START INVESTING IN YOU</p>
+        <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways</p>
+        <button class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 border transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready to get
+            started?</button>
+    </div>
+</div>
+
+
       
 </body>
 </html>
