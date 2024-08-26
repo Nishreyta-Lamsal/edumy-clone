@@ -22,9 +22,20 @@
         body{ 
             font-family: 'Nunito', sans-serif;
         }
+        .bg-custom-blue{
+            background-color: #2441E7;
+        }
+        .text-custom-light-grey{
+            color: #a4a4a4;
+        }
+        .bg-color-dark-grey{
+            background-color: #141414
+        }
+
     </style>
 </head>
 <body>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
 <nav class="bg-custom-grey h-16 flex items-center justify-between px-4">
     <!-- Left side: Logo -->
@@ -42,20 +53,39 @@
 <nav class="bg-black">
     <div>
         <img src="./assets/logo.png" class="mx-32 py-3 px-3 inline-block" alt="Logo">
-        <p class="text-white inline-block -mx-28 text-2xl"> EDUMY </p>
+        <p class="text-white font-bold inline-block -mx-28 text-2xl"> EDUMY </p>
+        <button class="in-line mx-36 bg-custom-blue px-8 py-3 rounded-3xl text-white text-0.5Xl"> LIBRARY </button>
+        <input type="text" placeholder="Search for the software or skills you want to learn" class="w-auto inline-block -mx-28 pl-2 pr-44 py-3 rounded-3xl placeholder:text-sm"/>
+        <p class="inline-block mx-72 px-3 text-custom-light-grey"> +(90) 123 456 789 </p>
+        <select id="languages" name="languages" class="inline-block -mx-64 text-custom-light-grey bg-black">
+            <option value="english" selected>English</option>
+            <option value="french">French</option>
+            <option value="italian">Italian</option>
+            <option value="spanish">Spanish</option>
+            <option value="turkish">Turkish</option>
+        </select>
     </div>
 </nav>
 <div>
-    <nav>
-        <ul class="flex">
-            <li></li>
+    <nav class="bg-color-dark-grey p-7">
+        <ul class="flex space-x-16 mx-16 text-custom-light-grey">
             <li>Home</li>
             <li>Courses</li>
             <li>Events</li>
             <li>Pages</li>
-            <li>blog</li>
-            <li>contact</li>
+            <li>Blog</li>
+            <li>Contact</li>
+            <p>
+                <img src="./assets/instructor.png" alt="Logo" class="w-8 inline-block ml-56">
+                Become an instructor
+            </p>
+            <img src="./assets/line.png" class="inline-block w-1 h-8"/>
+            <p>
+                <img src="assets/login.png" class="w-5 inline-block -ml-11"/>
+                Login/Register
+            </p>
         </ul>
+        <p> </p>
     </nav>
 </div>
       
