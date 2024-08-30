@@ -39,21 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Slider 2 - Testimonial Slider
     function initializeSlider2() {
         let slideIndex2 = 0;
-        const slides2 = document.querySelector("#testimonialSliderContainer #testimonialSlider");
+        const slides2 = document.querySelector("#testimonialSlider");
         const testimonialDots = document.querySelectorAll("#testimonialSliderContainer .dot");
-
+        
         if (!slides2) {
             console.error("Slider element not found!");
             return;
         }
 
-        function showSlides2() {
-            slideIndex2++;
-            if (slideIndex2 >= 2) { // Assuming 2 groups of slides
-                slideIndex2 = 0;
-            }
+        function currentSlide2(n) {
+            slideIndex2 = n;
             updateSlides2();
-            setTimeout(showSlides2, 5000); // Change image every 5 seconds
         }
 
         function updateSlides2() {
@@ -67,21 +63,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         testimonialDots.forEach((dot, index) => {
-            dot.addEventListener("click", () => {
-                slideIndex2 = index;
-                updateSlides2();
-            });
+            dot.addEventListener("click", () => currentSlide2(index));
         });
 
-        showSlides2();
+        // Initialize slides and dots based on the initial index
+        updateSlides2();
     }
 
-    // Initialize both sliders
+    // Initialize both sliders after the DOM has loaded
     initializeSlider1();
     initializeSlider2();
 });
-
-
-
 
 

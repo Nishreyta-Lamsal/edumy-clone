@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
@@ -44,63 +46,69 @@
 
          .bg-gray{
         background-color: #151515;
-    }
-    .footer-contact h4, 
-    .footer-company h4,
-    .footer-program h4,
-    .footer-support h4,
-    .footer-apps h4{
-        color: #ffffff;
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-    .footer-contact p{
-        color: #969696;
-        font-size: 13px;
-        line-height: 30px;
-        margin-bottom: 0;
-    }
-    .footer-contact p:hover{
-        color: #969696;
-        font-size: 13px;
-        line-height: 30px;
-        margin-bottom: 0;
-        box-sizing: border-box;
-    }
-    .footer-one li{
-        color: #969696;
-        font-size: 13px;
-        line-height: 30px;
-        margin-bottom: 0;
-    }
-    .fa-apple{
-        color: #726e6e;
-        font-size: 2.5rem;
-        
-    }
-    .fa-google-play{
-        color: #726e6e;
-        font-size: 2.5rem;
-    }
-    .subtitle{
-        color: #726e6e ;
-    }
-    .footer_middle_area li{
-        color: #726e6e;
-    }
-    .copyright-widget p{
-        color: #726e6e;
-    }
-    .footer-middle-container{
-        background: #151515;
-    }
-    .footer-middle-container a{
-        color: #726e6e;
-    }
 
-    .bg-color-black{
-        background-color: #0a0a0a;
-    }
+        }
+        .footer-contact h4, 
+        .footer-company h4,
+        .footer-program h4,
+        .footer-support h4,
+        .footer-apps h4{
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .footer-contact p{
+            color: #969696;
+            font-size: 13px;
+            line-height: 30px;
+            margin-bottom: 0;
+        }
+        .footer-contact p:hover{
+            color: #969696;
+            font-size: 13px;
+            line-height: 30px;
+            margin-bottom: 0;
+            box-sizing: border-box;
+        }
+        .footer-one li{
+            color: #969696;
+            font-size: 13px;
+            line-height: 30px;
+            margin-bottom: 0;
+        }
+        .fa-apple{
+            color: #726e6e;
+            font-size: 2.5rem;
+            
+        }
+        .fa-google-play{
+            color: #726e6e;
+            font-size: 2.5rem;
+        }
+        .subtitle{
+            color: #726e6e ;
+        }
+        .footer_middle_area li{
+            color: #726e6e;
+        }
+        .copyright-widget p{
+            color: #726e6e;
+        }
+        .footer-middle-container{
+            background: #151515;
+        }
+        .footer-middle-container a{
+            color: #726e6e;
+        }
+
+        .bg-color-black{
+            background-color: #0a0a0a;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            display: none;
+        }
 
     </style>
 </head>
@@ -178,7 +186,7 @@
             <li> <a href="#" class="hover:text-white cursor-pointer">Blog</a></li>
             <li> <a href="#" class="hover:text-white cursor-pointer">Contact</a></li>
 
-            <div class="flex items-center space-x-3 pl-56">
+            <div class="flex items-center space-x-3 pl-44">
                 <!-- Become an Instructor -->
                 <div class="flex items-center space-x-2 mr-4">
                     <i class="fas fa-bullhorn"></i>
@@ -196,15 +204,78 @@
     </nav>
 </div>
 
-<div class="relative">
-    <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
-    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-        <p class="text-6xl">START INVESTING IN YOU</p>
-        <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways</p>
-        <button class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 border transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready to get
-            started?</button>
+            <div class="relative w-full h-full overflow-hidden">
+                <div class="swiper myNewSwiper w-full h-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg-gray-200 flex justify-center items-center"><div class="relative">
+                            <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
+                            <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                                <p class="text-6xl">START INVESTING IN YOU</p>
+                                <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways
+                                </p>
+                                <button
+                                    class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready
+                                    to get
+                                    started?</button>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="swiper-slide bg-gray-300 flex justify-center items-center">
+                <div class="relative">
+                    <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                        <p class="text-6xl">START INVESTING IN YOU</p>
+                        <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways
+                        </p>
+                        <button
+                            class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready
+                            to get
+                            started?</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="swiper-slide bg-gray-400 flex justify-center items-center">
+                <div class="relative">
+                    <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                        <p class="text-6xl">START INVESTING IN YOU</p>
+                        <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways
+                        </p>
+                        <button
+                            class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready
+                            to get
+                            started?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next">
+            <span class="text-white mr-10">NE <br/> XT</span>
+            <i class="fa-solid fa-arrow-right text-white -ml-7 mr-32"></i>
+        </div>
+        <div class="swiper-button-prev">
+            <i class="fa-solid fa-arrow-left text-white ml-36"></i>
+            <span class="text-white ml-4 ">PR <br /> EV</span>
+        </div>
     </div>
 </div>
+
+<script>
+    const swipers = new Swiper('.myNewSwiper', {
+        slidesPerView: 1,         // Show 1 slide at a time
+        spaceBetween: 10,         
+        loop: true,               // Enable looping
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 
 <div class="flex justify-center flex-col items-center mt-14">
     <h2 class="text-black text-2xl mb-4 font-bold">Browse Our Top Courses</h2>
@@ -212,9 +283,25 @@
 </div>    
 
 <section class= "text-black flex justify-center flex-wrap -ml-12">
-        <div class="ml-14 pb-10 -mr-5">
-            <div class="relative bg-white rounded-lg shadow-md border border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course1.jpg" alt="Course 1" class="w-full h-48 object-cover brightness-75 contrast-70 brightness-75 contrast-70">   
+        <div class="ml-14 pb-10 -mr-5 group">
+            <div class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course1.jpg" alt="Course 1" class="w-full h-48 object-cover contrast-70 brightness-75 transition-transform duration-300 ease-in-out group-hover:scale-105">   
+                <!-- Overlay content -->
+                <div
+                    class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <!-- Centered text -->
+                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                    <!-- Top-left button -->
+                    <button
+                        class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Best
+                        Seller</button>
+                </div>
+                <!-- Heart Icon -->
+                <div class="absolute top-4 right-4">
+                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                </div>
+                </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">Introduction Web Design with<br/> HTML</p>
@@ -232,11 +319,26 @@
             </div>
         </div> 
     
-        <div class="ml-14 -mr-5">
-            <div
-                class="relative bg-white rounded-lg shadow-md border border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course2.jpg" alt="Course 1"
-                    class="w-full h-48 object-cover brightness-75 contrast-70 brightness-75 contrast-70">
+        <div class="ml-14 -mr-5 group">
+            <div class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course2.jpg" alt="Course 2"
+                    class="w-full h-48 object-cover contrast-70 brightness-75 contrast-70 transition-transform duration-300 ease-in-out group-hover:scale-105">
+                    <!-- Overlay content -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <!-- Centered text -->
+                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                        <!-- Top-left button -->
+                        <button
+                            class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top
+                            Seller</button>
+                    </div>
+                    <!-- Heart Icon -->
+                    <div class="absolute top-4 right-4">
+                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                    </div>
+                    </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">Designing a Responsive Mobile<br />Website with Muse</p>
@@ -254,11 +356,27 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5">
+        <div class="ml-14 -mr-5 group">
             <div
-                class="relative bg-white rounded-lg shadow-md border border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course3.jpg" alt="Course 1"
-                    class="w-full h-48 object-cover brightness-75 contrast-70 brightness-75 contrast-70">
+                class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course3.jpg" alt="Course 3"
+                    class="w-full h-48 object-cover contrast-70 brightness-75 contrast-70 transition-transform duration-300 ease-in-out group-hover:scale-105">
+                    <!-- Overlay content -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <!-- Centered text -->
+                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                        <!-- Top-left button -->
+                        <button
+                            class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top
+                            Seller</button>
+                    </div>
+                    <!-- Heart Icon -->
+                    <div class="absolute top-4 right-4">
+                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                    </div>
+                    </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">Adobe XD: Prototyping Tips<br /> and Tricks</p>
@@ -276,11 +394,27 @@
             </div>
         </div>
 
-        <div class="ml-14">
+        <div class="ml-14 group">
             <div
-                class="relative bg-white rounded-lg shadow-md border border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course4.jpg" alt="Course 1"
-                    class="w-full h-48 object-cover brightness-75 contrast-70 brightness-75 contrast-70">
+                class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course4.jpg" alt="Course 4"
+                    class="w-full h-48 object-cover contrast-70 brightness-75 contrast-70 transition-transform duration-300 ease-in-out group-hover:scale-105">
+                    <!-- Overlay content -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <!-- Centered text -->
+                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                        <!-- Top-left button -->
+                        <button
+                            class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Best
+                            Seller</button>
+                    </div>
+                    <!-- Heart Icon -->
+                    <div class="absolute top-4 right-4">
+                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                    </div>
+                    </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">Sketch: Creating Responsive<br />SVG</p>
@@ -298,11 +432,27 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5">
+        <div class="ml-14 -mr-5 group">
             <div
-                class="relative bg-white rounded-lg shadow-md border border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course5.jpg" alt="Course 1"
-                    class="w-full h-48 object-cover brightness-75 contrast-70 brightness-75 contrast-70">
+                class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course5.jpg" alt="Course 5"
+                    class="w-full h-48 object-cover contrast-70 brightness-75 contrast-70 transition-transform duration-300 ease-in-out group-hover:scale-105">
+                    <!-- Overlay content -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <!-- Centered text -->
+                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                        <!-- Top-left button -->
+                        <button
+                            class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Best
+                            Seller</button>
+                    </div>
+                    <!-- Heart Icon -->
+                    <div class="absolute top-4 right-4">
+                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                    </div>
+                    </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">Design Instruments for <br />Communication</p>
@@ -320,11 +470,27 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5">
+        <div class="ml-14 -mr-5 group">
             <div
-                class="relative bg-white rounded-lg shadow-md border border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course6.jpg" alt="Course 1"
-                    class="w-full h-48 object-cover brightness-75 contrast-70 brightness-75 contrast-70">
+                class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course6.jpg" alt="Course 6"
+                    class="w-full h-48 object-cover contrast-70 brightness-75 contrast-70 transition-transform duration-300 ease-in-out group-hover:scale-105">
+                    <!-- Overlay content -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <!-- Centered text -->
+                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                        <!-- Top-left button -->
+                        <button
+                            class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top
+                            Seller</button>
+                    </div>
+                    <!-- Heart Icon -->
+                    <div class="absolute top-4 right-4">
+                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                    </div>
+                    </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">How to be a DJ? Make<br />Electronic Music</p>
@@ -342,11 +508,27 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5">
+        <div class="ml-14 -mr-5 group">
             <div
-                class="relative bg-white rounded-lg shadow-md border border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course7.jpg" alt="Course 1"
-                    class="w-full h-48 object-cover brightness-75 contrast-70 brightness-75 contrast-70">
+                class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course7.jpg" alt="Course 7"
+                    class="w-full h-48 object-cover contrast-70 brightness-75 contrast-70 transition-transform duration-300 ease-in-out group-hover:scale-105">
+                    <!-- Overlay content -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <!-- Centered text -->
+                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                        <!-- Top-left button -->
+                        <button
+                            class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top
+                            Seller</button>
+                    </div>
+                    <!-- Heart Icon -->
+                    <div class="absolute top-4 right-4">
+                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                    </div>
+                    </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">How to Make Beautiful<br />Landscape Photos?</p>
@@ -364,11 +546,27 @@
             </div>
         </div>
 
-        <div class="ml-14 ">
+        <div class="ml-14 group">
             <div
                 class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
-                <img src="./assets/course8.jpg" alt="Course 1"
-                    class="w-full h-48 object-cover brightness-75 contrast-70 contrast-70">
+                <div class="relative group w-full h-48 overflow-hidden">
+                <img src="./assets/course8.jpg" alt="Course 8"
+                    class="w-full h-48 object-cover brightness-75 contrast-70 contrast-70 transition-transform duration-300 ease-in-out group-hover:scale-105">
+                    <!-- Overlay content -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <!-- Centered text -->
+                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                        <!-- Top-left button -->
+                        <button
+                            class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Best
+                            Seller</button>
+                    </div>
+                    <!-- Heart Icon -->
+                    <div class="absolute top-4 right-4">
+                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                    </div>
+                    </div>
                 <div class="p-0">
                     <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
                     <p class="text-black text-lg pl-5 pt-0">Fashion Photography From<br />Professional</p>
@@ -463,7 +661,7 @@
                     <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-70 transition-opacity duration-300 rounded-lg">
                     </div>
                     <!-- Date on Top Right -->
-                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2">
+                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2 hover:bg-black hover:text-white">
                         <span class="block text-center text-xl">28</span>
                         <span class="block text-center text-xl">March</span>
                     </div>
@@ -483,7 +681,7 @@
                     <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-70 transition-opacity duration-300 rounded-lg">
                     </div>
                     <!-- Date on Top Right -->
-                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2">
+                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2 hover:bg-black hover:text-white">
                         <span class="block text-center text-xl">28</span>
                         <span class="block text-center text-xl">March</span>
                     </div>
@@ -503,7 +701,7 @@
                     <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-70 transition-opacity duration-300 rounded-lg">
                     </div>
                     <!-- Date on Top Right -->
-                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2">
+                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2 hover:bg-black hover:text-white">
                         <span class="block text-center text-xl">28</span>
                         <span class="block text-center text-xl">March</span>
                     </div>
@@ -526,7 +724,7 @@
                     <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-70 transition-opacity duration-300 rounded-lg">
                     </div>
                     <!-- Date on Top Right -->
-                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2">
+                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2 hover:bg-black hover:text-white">
                         <span class="block text-center text-xl">28</span>
                         <span class="block text-center text-xl">March</span>
                     </div>
@@ -549,7 +747,7 @@
                 </div>
         
                 <!-- Date on Top Right -->
-                <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2 z-10">
+                <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2 z-10 hover:bg-black hover:text-white">
                     <span class="block text-center text-xl">28</span>
                     <span class="block text-center text-xl">March</span>
                 </div>
@@ -570,7 +768,7 @@
                     <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-70 transition-opacity duration-300 rounded-lg">
                     </div>
                     <!-- Date on Top Right -->
-                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2">
+                    <div class="absolute top-4 right-2 bg-white text-black rounded-md px-4 py-2 hover:bg-black hover:text-white">
                         <span class="block text-center text-xl">28</span>
                         <span class="block text-center text-xl">March</span>
                     </div>
@@ -593,118 +791,464 @@
 
 <script src="./slider.js"></script>
 
-<div class="bg-white py-16">
+<div class="bg-blue-900 text-white">
+    <div class="flex justify-center flex-col items-center pt-8 pb-28">
+        <h2 class="text-white text-2xl mb-4 font-bold">Popular Courses</h2>
+        <p class="text-white mb-8">Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+
+        <!-- Swiper Section -->
+        <section class="w-full max-w-screen-lg mx-auto">
+            <div class="swiper mySwiper -ml-56 -mr-64">
+                <div class="swiper-wrapper ">
+
+                    <!-- Swiper Slide 1 -->
+                    <div class="swiper-slide ml-5 -mr-24 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                        <div class="relative group w-full h-48 overflow-hidden">
+                            <img src="./assets/course1.jpg" alt="Course 1"
+                                 class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                <!-- Overlay content -->
+                                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <!-- Centered text -->
+                                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                    <!-- Top-left button -->
+                                    <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Best Seller</button>
+                                </div>
+                                <!-- Heart Icon -->
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">Introduction Web Design with<br/> HTML</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i
+                                            class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slide 2 -->
+                    <div class="swiper-slide ml-5 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                            <div class="relative group w-full h-48 overflow-hidden">
+                                <img src="./assets/course2.jpg" alt="Course 2"
+                                   class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                <!-- Overlay content -->
+                                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <!-- Centered text -->
+                                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                    <!-- Top-left button -->
+                                    <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top Seller</button>
+                                </div>
+                                <!-- Heart Icon -->
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">Designing a Responsive Mobile<br />Website with
+                                    Muse</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i
+                                            class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slide 3 -->
+                    <div class="swiper-slide ml-5 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                            <div class="relative group w-full h-48 overflow-hidden">
+                                <img src="./assets/course3.jpg" alt="Course 3"
+                                     class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                    <!-- Overlay content -->
+                                    <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                        <!-- Centered text -->
+                                        <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                        <!-- Top-left button -->
+                                        <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top Seller</button>
+                                    </div>
+                                    <!-- Heart Icon -->
+                                    <div class="absolute top-4 right-4">
+                                        <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                    </div>
+                                </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">Adobe XD: Prototyping Tips<br/> and Tricks</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i
+                                            class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slide 4 -->
+                    <div class="swiper-slide ml-5 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                            <div class="relative group w-full h-48 overflow-hidden">
+                                <img src="./assets/course4.jpg" alt="Course 4"
+                                     class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                <!-- Overlay content -->
+                                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <!-- Centered text -->
+                                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                    <!-- Top-left button -->
+                                    <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Best Seller</button>
+                                </div>
+                                <!-- Heart Icon -->
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">Sketch: Creating Responsive<br/> SVG</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i
+                                            class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slide 5 -->
+                    <div class="swiper-slide ml-5 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                            <div class="relative group w-full h-48 overflow-hidden">
+                                <img src="./assets/course5.jpg" alt="Course 5"
+                                     class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                <!-- Overlay content -->
+                                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <!-- Centered text -->
+                                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                    <!-- Top-left button -->
+                                    <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 text-sm rounded-md transition-transform duration-300 ease-in-out">Best Seller</button>
+                                </div>
+                                <!-- Heart Icon -->
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">Design Instruments for<br/> Communication</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i
+                                            class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slide 6 -->
+                    <div class="swiper-slide ml-5 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                            <div class="relative group w-full h-48 overflow-hidden">
+                                <img src="./assets/course6.jpg" alt="Course 6"
+                                     class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                <!-- Overlay content -->
+                                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <!-- Centered text -->
+                                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                    <!-- Top-left button -->
+                                    <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top Seller</button>
+                                </div>
+                                <!-- Heart Icon -->
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">How to be a DJ? Make<br/> Electronic Music</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slide 7 -->
+                    <div class="swiper-slide ml-5 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                            <div class="relative group w-full h-48 overflow-hidden">
+                                <img src="./assets/course7.jpg" alt="Course 7"
+                                    class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                <!-- Overlay content -->
+                                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <!-- Centered text -->
+                                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                    <!-- Top-left button -->
+                                    <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Top Seller</button>
+                                </div>
+                                <!-- Heart Icon -->
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">How to Make Beautiful<br/> Landscape Photos?</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper Slide 8 -->
+                    <div class="swiper-slide ml-5 group">
+                        <div
+                            class="relative bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
+                        <div class="relative group w-full h-48 overflow-hidden">
+                            <img src="./assets/course8.jpg" alt="Course 8"
+                                 class="w-full h-full object-cover contrast-70 brightness-75 rounded-t-lg transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                <!-- Overlay content -->
+                                <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <!-- Centered text -->
+                                    <p class="text-white text-lg transition-transform duration-300 ease-in-out">Preview Course</p>
+                                    <!-- Top-left button -->
+                                    <button class="absolute top-4 left-4 bg-orange-700 text-white px-2 py-1 rounded-md transition-transform duration-300 ease-in-out">Best Seller</button>
+                                </div>
+                                <!-- Heart Icon -->
+                                <div class="absolute top-4 right-4">
+                                    <i class="fa-regular fa-heart text-white text-2xl"></i>
+                                </div>
+                            </div>
+                            <div class="p-0">
+                                <h3 class="text-grey p-5 pb-2">Ali TUFAN</h3>
+                                <p class="text-black text-lg pl-5 pt-0">Fashion Photography From<br/> Professional</p>
+                                <div class="flex items-center">
+                                    <span class="text-yellow-500 pl-5">★★★★★</span>
+                                    <span class="ml-2 text-grey pb-3 pt-3">(6)</span>
+                                </div>
+                                <hr class="mt-2">
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-600 pl-5"><i class="fa-regular fa-user pr-2"></i>1548</span>
+                                    <span class="text-gray-600"><i class="fa-regular fa-comments mr-2 -ml-12"></i>25</span>
+                                    <span class="text-blue-900 font-bold text-lg pr-2">$69.95</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next text-gray-700">
+                    <button class="bg-white px-6 py-3 hover:bg-blue-800"> <i class="fa-solid fa-arrow-right text-blue-700 hover:text-white"></i></button>
+                </div>
+
+                <div class="swiper-button-prev text-gray-700">
+                    <button class="bg-white px-6 py-3 hover:bg-blue-800"> <i class="fa-solid fa-arrow-left text-blue-700 hover:text-white"></i></button>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+    const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 5,    // Show 5 slides at a time
+        spaceBetween: 1,    // Adjust spacing between slides
+        loop: true,          // Enable looping
+        loopFillGroupWithBlank: true,  // Prevent empty spaces when looped
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+    });
+</script>
+
+<div class="bg-white py-6 -mt-10 ">
     <div class="max-w-6xl mx-auto text-center">
         <!-- Title -->
         <h2 class="text-3xl font-bold mb-4">What People Say</h2>
-        <p class="text-gray-500 mb-12">Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        <p class="text-gray-500 mb-16">Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
 
-        <!-- Testimonial Slider -->
-        <div class="relative overflow-hidden" id="testimonialSliderContainer">
-            <!-- Slider Container -->
-            <div class="flex transition-transform duration-700 ease-in-out" id="testimonialSlider">
-
-                <!-- Slide 1 -->
-                <div class="flex-none flex w-full space-x-4">
-                    <!-- Testimonial 1 -->
-                    <div class="flex-none w-full sm:w-1/3 px-4">
-                        <div class="flex flex-col items-center">
-                            <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                                <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                                <p class="text-gray-700">It was really fun getting to know the team during the
-                                    project...</p>
-                            </div>
-                            <div class="mt-6">
-                                <img class="w-16 h-16 rounded-full mx-auto" src="profile1.jpg" alt="Aura Brooks">
-                                <h3 class="mt-2 text-lg font-semibold">Aura Brooks</h3>
-                                <p class="text-blue-500"><a href="#">Graphic Designer, Owl Eyes</a></p>
-                            </div>
-                        </div>
+    <!-- Testimonial Slider Container -->
+    <div id="testimonialSliderContainer" class="relative overflow-hidden">
+        <div id="testimonialSlider" class="flex transition-transform duration-500">
+            <!-- Slide 1 -->
+            <div class="flex-none w-full sm:w-1/3 px-4">
+                <!-- Testimonial 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
+                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
+                        <p class="text-gray-700">It was really fun getting to know the team during the project...</p>
                     </div>
-                    <!-- Testimonial 2 -->
-                    <div class="flex-none w-full sm:w-1/3 px-4">
-                        <div class="flex flex-col items-center">
-                            <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                                <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                                <p class="text-gray-700">It was really fun getting to know the team during the
-                                    project...</p>
-                            </div>
-                            <div class="mt-6">
-                                <img class="w-16 h-16 rounded-full mx-auto" src="profile2.jpg" alt="Ali Tufan">
-                                <h3 class="mt-2 text-lg font-semibold">Ali Tufan</h3>
-                                <p class="text-blue-500"><a href="#">Client</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="flex-none w-full sm:w-1/3 px-4">
-                        <div class="flex flex-col items-center">
-                            <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                                <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                                <p class="text-gray-700">It was really fun getting to know the team during the
-                                    project...</p>
-                            </div>
-                            <div class="mt-6">
-                                <img class="w-16 h-16 rounded-full mx-auto" src="profile3.jpg" alt="Jack Graham">
-                                <h3 class="mt-2 text-lg font-semibold">Jack Graham</h3>
-                                <p class="text-blue-500"><a href="#">Co-founder, Coffee Inc</a></p>
-                            </div>
-                        </div>
+                    <div class="mt-6">
+                        <img class="w-16 h-16 rounded-full mx-auto" src="profile1.jpg" alt="Aura Brooks">
+                        <h3 class="mt-2 text-lg font-semibold">Aura Brooks</h3>
+                        <p class="text-blue-500"><a href="#">Graphic Designer, Owl Eyes</a></p>
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="flex-none flex w-full space-x-4">
-                    <!-- Testimonial 4 -->
-                    <div class="flex-none w-full sm:w-1/3 px-4">
-                        <div class="flex flex-col items-center">
-                            <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                                <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                                <p class="text-gray-700">It was a pleasure to work with such a professional team...</p>
-                            </div>
-                            <div class="mt-6">
-                                <img class="w-16 h-16 rounded-full mx-auto" src="profile4.jpg" alt="Jane Doe">
-                                <h3 class="mt-2 text-lg font-semibold">Jane Doe</h3>
-                                <p class="text-blue-500"><a href="#">Marketing Manager, XYZ Corp</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 5 -->
-                    <div class="flex-none w-full sm:w-1/3 px-4">
-                        <div class="flex flex-col items-center">
-                            <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                                <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                                <p class="text-gray-700">Working with them was an incredible experience...</p>
-                            </div>
-                            <div class="mt-6">
-                                <img class="w-16 h-16 rounded-full mx-auto" src="profile5.jpg" alt="John Smith">
-                                <h3 class="mt-2 text-lg font-semibold">John Smith</h3>
-                                <p class="text-blue-500"><a href="#">CEO, ABC Ltd</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 6 -->
-                    <div class="flex-none w-full sm:w-1/3 px-4">
-                        <div class="flex flex-col items-center">
-                            <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                                <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                                <p class="text-gray-700">Their creativity and dedication really shined through...</p>
-                            </div>
-                            <div class="mt-6">
-                                <img class="w-16 h-16 rounded-full mx-auto" src="profile6.jpg" alt="Emily White">
-                                <h3 class="mt-2 text-lg font-semibold">Emily White</h3>
-                                <p class="text-blue-500"><a href="#">Product Manager, Beta Inc</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            <!-- Slide 2 -->
+            <div class="flex-none w-full sm:w-1/3 px-4">
+                <!-- Testimonial 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
+                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
+                        <p class="text-gray-700">It was really fun getting to know the team during the project...</p>
+                    </div>
+                    <div class="mt-6">
+                        <img class="w-16 h-16 rounded-full mx-auto" src="profile2.jpg" alt="Ali Tufan">
+                        <h3 class="mt-2 text-lg font-semibold">Ali Tufan</h3>
+                        <p class="text-blue-500"><a href="#">Client</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="flex-none w-full sm:w-1/3 px-4">
+                <!-- Testimonial 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
+                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
+                        <p class="text-gray-700">It was really fun getting to know the team during the project...</p>
+                    </div>
+                    <div class="mt-6">
+                        <img class="w-16 h-16 rounded-full mx-auto" src="profile3.jpg" alt="Jack Graham">
+                        <h3 class="mt-2 text-lg font-semibold">Jack Graham</h3>
+                        <p class="text-blue-500"><a href="#">Co-founder, Coffee Inc</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="flex-none w-full sm:w-1/3 px-4">
+                <!-- Testimonial 4 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
+                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
+                        <p class="text-gray-700">It was a pleasure to work with such a professional team...</p>
+                    </div>
+                    <div class="mt-6">
+                        <img class="w-16 h-16 rounded-full mx-auto" src="profile4.jpg" alt="Jane Doe">
+                        <h3 class="mt-2 text-lg font-semibold">Jane Doe</h3>
+                        <p class="text-blue-500"><a href="#">Marketing Manager, XYZ Corp</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="flex-none w-full sm:w-1/3 px-4">
+                <!-- Testimonial 5 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
+                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
+                        <p class="text-gray-700">Working with them was an incredible experience...</p>
+                    </div>
+                    <div class="mt-6">
+                        <img class="w-16 h-16 rounded-full mx-auto" src="profile5.jpg" alt="John Smith">
+                        <h3 class="mt-2 text-lg font-semibold">John Smith</h3>
+                        <p class="text-blue-500"><a href="#">CEO, ABC Ltd</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="flex-none w-full sm:w-1/3 px-4">
+                <!-- Testimonial 6 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
+                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
+                        <p class="text-gray-700">Their creativity and dedication really shined through...</p>
+                    </div>
+                    <div class="mt-6">
+                        <img class="w-16 h-16 rounded-full mx-auto" src="profile6.jpg" alt="Emily White">
+                        <h3 class="mt-2 text-lg font-semibold">Emily White</h3>
+                        <p class="text-blue-500"><a href="#">Product Manager, Beta Inc</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="flex-none w-full sm:w-1/3 px-4">
+                <!-- Testimonial 7 -->
+                <div class="flex flex-col items-center">
+                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
+                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
+                        <p class="text-gray-700">Their innovative approach and attention to detail were exceptional...</p>
+                    </div>
+                    <div class="mt-6">
+                        <img class="w-16 h-16 rounded-full mx-auto" src="profile7.jpg" alt="Alex Johnson">
+                        <h3 class="mt-2 text-lg font-semibold">Alex Johnson</h3>
+                        <p class="text-blue-500"><a href="#">Lead Developer, Gamma Ltd</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
             <!-- Slider Controls -->
             <div class="flex justify-center mt-8 space-x-2">
                 <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(0)"></button>
                 <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(1)"></button>
+                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(2)"></button>
+                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(3)"></button>
+                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(4)"></button>
+                
             </div>
         </div>
     </div>
