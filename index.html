@@ -110,30 +110,101 @@
             display: none;
         }
 
+        @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(50px); }
+        100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUpDelay {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-up {
+        animation: fadeInUp 1000ms ease-out forwards;
+        }
+
+        .fade-in-up-delay-500 {
+        animation: fadeInUp 1000ms ease-out forwards;
+        animation-delay: 500ms;
+        }
+
+        .fade-in-up-delay-1000 {
+        animation: fadeInUp 1000ms ease-out forwards;
+        animation-delay: 1000ms;
+        }
+        .swiper2 {
+        overflow: hidden;
+        }
+        .swiper2 .swiper-slide {
+            transition: transform 0.3s;
+            opacity: 0.5;
+        }
+        .swiper2 .swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .swiper2 .swiper-slide-prev,
+        .swiper2 .swiper-slide-next {
+            transform: scale(0.85);
+            opacity: 0.75;
+        }
+        .swiper2 .swiper-slide-duplicate-active {
+            transform: scale(0.85);
+            opacity: 0.75;
+        }
+        .swiper2 .swiper-slide-active .bg-white {
+            background-color: #2441e7;
+
+        }
+        .swiper2 .swiper-slide-active .text-gray-700 {
+            color: white;
+        }
+        .swiper2 .testimonial-text {
+            width: 500px; 
+            padding: 16px;
+            height: 250px;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: var(--swiper-pagination-bottom);
+            top: var(--swiper-pagination-top, auto);
+            left: 0;
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
 
-<nav class="sticky top-0 bg-custom-grey h-16 flex items-center justify-between pl-4 pr-4 pt-0 z-50">
-    <div>
-        <img src="/assets/logo1.png" class="w-6 inline-block -mr-4 ml-6 h-7"/>
-        <a class="text-white mx-3 text-xl cursor-pointer" href="https://themeforest.net/item/edumy-lms-online-education-course-school-html-template/24648034"><span class="font-bold">envato</span>market</a>
+<nav class="sticky top-0 bg-custom-grey h-16 grid grid-cols-2 items-center pl-4 pr-4 pt-0 z-50">
+    <div class="flex items-center">
+        <img src="/assets/logo1.png" class="w-6 h-7 mr-2 ml-6" />
+        <a class="text-white text-xl cursor-pointer"
+            href="https://themeforest.net/item/edumy-lms-online-education-course-school-html-template/24648034">
+            <span class="font-bold">envato</span>market
+        </a>
     </div>
 
-    <div>
-        <a href="https://themeforest.net/checkout/from_item/24648034?license=regular&amp;support=bundle_6month"><button class="bg-custom-green text-white py-1 px-4 rounded shadow-solid-darker-green active:translate-y-1 active:shadow-none cursor-pointer">
-            Buy now
-        </button> </a>
+    <div class="justify-self-end">
+        <a href="https://themeforest.net/checkout/from_item/24648034?license=regular&amp;support=bundle_6month">
+            <button
+                class="bg-custom-green text-white py-1 px-4 rounded shadow-solid-darker-green active:translate-y-1 active:shadow-none cursor-pointer">
+                Buy now
+            </button>
+        </a>
     </div>
 </nav>
+
 <nav class="bg-black">
     <div>
         <img src="./assets/logo.png" class="mx-32 py-3 px-3 inline-block" alt="Logo">
         <p class="text-white font-bold inline-block -mx-28 text-2xl"> EDUMY </p>
         <button class="in-line mx-36 bg-custom-blue px-8 py-3 rounded-3xl text-white text-0.5Xl cursor-pointer"> LIBRARY </button>
-        <input type="text" placeholder="Search for the software or skills you want to learn" class="w-auto inline-block -mx-28 pl-2 pr-44 py-3 rounded-3xl placeholder:text-sm"/>
-        <p class="inline-block mx-72 px-4 text-custom-light-grey text-sm cursor-pointer"> +(90) 123 456 789 </p>
-        <select id="languages" name="languages" class="inline-block -mx-64 text-custom-light-grey bg-black text-sm cursor-pointer">
+        <i class="fa-solid fa-magnifying-glass absolute left-[57rem] mt-5 text-gray-700 text-2xl cursor-pointer"></i>
+        <input type="text" placeholder="Search for the software or skills you want to learn"
+            class="w-[27rem] max-w-lg pl-7 py-3 rounded-3xl placeholder:text-sm -ml-24 mr-20" style="box-sizing: border-box;"/>
+        <p class="inline-block ml-32 text-custom-light-grey text-sm cursor-pointer"> +(90) 123 456 789 </p>
+        <select id="languages" name="languages" class="inline-block ml-7 text-custom-light-grey bg-black text-sm cursor-pointer">
             <option value="english" selected>English</option>
             <option value="french">French</option>
             <option value="italian">Italian</option>
@@ -143,119 +214,171 @@
     </div>
 </nav>
 
-<div>
-    <nav class="sticky top-7 bg-color-dark-grey pt-8 pb-7 z-30 pl-20">
+    <nav class="sticky top-16 z-40 bg-color-dark-grey pt-8 pb-7 pl-20">
         <ul class="flex space-x-16 mx-16 text-custom-light-grey">
-        <!-- Home Dropdown -->
+    
         <li class="relative group">
-            <a href="#" class="text-gray-300 group-hover:text-white hover:bg-gray-800 px-4 py-2 cursor-pointer">Home</a>
-            <ul class="absolute left-0 hidden group-hover:block bg-gray-900 text-gray-300 py-2 mt-2 w-48">
+            <a href="#" class=" group-hover:text-white hover:bg-color-dark-grey cursor-pointer">Home</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-color-dark-grey text-gray-300 py-2 pr-6 pl-6 mt-2 w-48">
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home 1</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home 2</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home 3</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home 4</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home 5</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home - University</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home College</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Home Kindergarten</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Update New Homepages</a></li>
             </ul>
         </li>
         
-        <!-- Courses Dropdown -->
         <li class="relative group">
-            <a href="#" class="text-gray-300 group-hover:text-white hover:bg-gray-800 px-4 py-2 cursor-pointer">Courses</a>
-            <ul class="absolute left-0 hidden group-hover:block bg-gray-900 text-gray-300 py-2 mt-2 w-48">
+            <a href="#" class=" group-hover:text-white hover:bg-color-dark-grey cursor-pointer">Courses</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-color-dark-grey text-gray-300 py-2 pr-6 pl-6 mt-2 w-48">
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Courses List</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Courses Single</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Instructors</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Instructor Single</a></li>
             </ul>
         </li>
         
-        <!-- Events Dropdown -->
         <li class="relative group">
-            <a href="#" class="text-gray-300 group-hover:text-white hover:bg-gray-800 px-4 py-2 cursor-pointer">Events</a>
-            <ul class="absolute left-0 hidden group-hover:block bg-gray-900 text-gray-300 py-2 mt-2 w-48">
+            <a href="#" class=" group-hover:text-white hover:bg-color-dark-grey cursor-pointer">Events</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-color-dark-grey text-gray-300 py-2 pr-6 pl-6 mt-2 w-48">
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Event List</a></li>
+                <hr>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Event Single</a></li>
             </ul>
         </li>
 
-            <li> <a href="#" class="hover:text-white cursor-pointer">Pages</a></li>
-            <li> <a href="#" class="hover:text-white cursor-pointer">Blog</a></li>
+        <li class="relative group">
+            <a href="#" class=" group-hover:text-white hover:bg-color-dark-grey cursor-pointer">Pages</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-color-dark-grey text-gray-300 py-2 pr-6 pl-6 mt-2 w-48">
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Shop Pages</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">User Admin</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">About Us</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Gallery</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Video Gallery</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Faq</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Login</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">New Login V2</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">New Login V3</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">New Login V4</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Register</a></li>
+            </ul>
+        </li>
+        
+        <li class="relative group">
+            <a href="#" class="group-hover:text-white hover:bg-color-dark-grey cursor-pointer">Blog</a>
+            <ul class="absolute left-0 hidden group-hover:block bg-color-dark-grey text-gray-300 py-2 pr-6 pl-6 mt-2 w-48">
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Blog List 1</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Blog List 2</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Blog List 3</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">New Blog List 4</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">New Blog List 5</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">New Blog List 6</a></li>
+                <hr>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:text-white">Single Post</a></li>
+            </ul>
+        </li>
+
             <li> <a href="#" class="hover:text-white cursor-pointer">Contact</a></li>
 
             <div class="flex items-center space-x-3 pl-44">
                 <!-- Become an Instructor -->
-                <div class="flex items-center space-x-2 mr-4">
+                <div class="flex items-center space-x-2 mr-4 ml-28 hover:text-white">
                     <i class="fas fa-bullhorn"></i>
-                    <a href="#" class="hover:text-white text-sm ">Become an Instructor</a>
+                    <a href="#" class="text-sm ">Become an Instructor</a>
                 </div>
                 <!-- Divider -->
                 <div class="border-l border-gray-600 h-6"></div>
                 <!-- Login/Register -->
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-2 hover:text-white">
                     <i class="fas fa-user ml-4"></i>
-                    <a href="#" class="hover:text-white text-sm">Login/Register</a>
+                    <a href="#" class="text-sm">Login/Register</a>
                 </div>
-            </div>
-        </ul>
-    </nav>
-</div>
+                        </div>
+                    </ul>
+                </nav>
 
             <div class="relative w-full h-full overflow-hidden">
                 <div class="swiper myNewSwiper w-full h-full">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide bg-gray-200 flex justify-center items-center"><div class="relative">
-                            <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
-                            <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-                                <p class="text-6xl">START INVESTING IN YOU</p>
-                                <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways
-                                </p>
-                                <button
-                                    class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready
-                                    to get
-                                    started?</button>
+                        <div class="swiper-slide bg-gray-200 flex justify-center items-center">
+                            <div class="relative">
+                                <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
+                                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                                    <p class="text-6xl fade-in-up">START INVESTING IN YOU</p>
+                                    <p class="mt-4 text-xl fade-in-up fade-in-up-delay-500">Technology is bringing a massive wave of
+                                        evolution on learning things on different ways</p>
+                                    <button
+                                        class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white fade-in-up fade-in-up-delay-1000">
+                                        Ready to get started?
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide bg-gray-300 flex justify-center items-center">
+                            <div class="relative">
+                                <img src="assets/home2.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
+                                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                                    <p class="text-6xl fade-in-up">START INVESTING IN YOU</p>
+                                    <p class="mt-4 text-xl fade-in-up fade-in-up-delay-500">Technology is bringing a massive wave of
+                                        evolution on learning things on different ways</p>
+                                    <button
+                                        class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white fade-in-up fade-in-up-delay-1000">
+                                        Ready to get started?
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide bg-gray-400 flex justify-center items-center">
+                            <div class="relative">
+                                <img src="assets/home3.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
+                                <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                                    <p class="text-6xl fade-in-up">START INVESTING IN YOU</p>
+                                    <p class="mt-4 text-xl fade-in-up fade-in-up-delay-500">Technology is bringing a massive wave of
+                                        evolution on learning things on different ways</p>
+                                    <button
+                                        class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white fade-in-up fade-in-up-delay-1000">
+                                        Ready to get started?
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-            </div>
 
-
-            <div class="swiper-slide bg-gray-300 flex justify-center items-center">
-                <div class="relative">
-                    <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
-                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-                        <p class="text-6xl">START INVESTING IN YOU</p>
-                        <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways
-                        </p>
-                        <button
-                            class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready
-                            to get
-                            started?</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="swiper-slide bg-gray-400 flex justify-center items-center">
-                <div class="relative">
-                    <img src="assets/home.jpg" alt="photo" class="brightness-50 contrast-100 w-full h-auto">
-                    <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-                        <p class="text-6xl">START INVESTING IN YOU</p>
-                        <p class="mt-4 text-xl">Technology is bringing a massive wave of evolution on learning things on different ways
-                        </p>
-                        <button
-                            class="mt-6 text-white py-4 px-12 rounded-full border-solid border-2 transition ease-in-out duration-200 hover:text-blue-700 hover:bg-white">Ready
-                            to get
-                            started?</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Add Navigation -->
         <div class="swiper-button-next">
-            <span class="text-white mr-10">NE <br/> XT</span>
+            <span class="text-white mr-10">NE <br /> XT</span>
             <i class="fa-solid fa-arrow-right text-white -ml-7 mr-32"></i>
         </div>
         <div class="swiper-button-prev">
@@ -263,27 +386,16 @@
             <span class="text-white ml-4 ">PR <br /> EV</span>
         </div>
     </div>
+
+
+<div class="flex flex-col items-center mt-14 px-4">
+    <h2 class="text-black text-2xl md:text-3xl lg:text-4xl mb-4 font-bold text-center">Browse Our Top Courses</h2>
+    <p class="text-grey text-base md:text-lg lg:text-xl mb-14 text-center">Cum doctus civibus efficiantur in imperdiet
+        deterruisset.</p>
 </div>
 
-<script>
-    const swipers = new Swiper('.myNewSwiper', {
-        slidesPerView: 1,         // Show 1 slide at a time
-        spaceBetween: 10,         
-        loop: true,               // Enable looping
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-</script>
-
-<div class="flex justify-center flex-col items-center mt-14">
-    <h2 class="text-black text-2xl mb-4 font-bold">Browse Our Top Courses</h2>
-    <p class="text-grey mb-14">Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-</div>    
-
-<section class= "text-black flex justify-center flex-wrap -ml-12">
-        <div class="ml-14 pb-10 -mr-5 group">
+<section class= "text-black flex justify-center flex-wrap -ml-12 gap-4 p-4">
+        <div class="ml-14 pb-10 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
                 <img src="./assets/course1.jpg" alt="Course 1" class="w-full h-48 object-cover contrast-70 brightness-75 transition-transform duration-300 ease-in-out group-hover:scale-105">   
@@ -319,7 +431,7 @@
             </div>
         </div> 
     
-        <div class="ml-14 -mr-5 group">
+        <div class="ml-14 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
                 <img src="./assets/course2.jpg" alt="Course 2"
@@ -356,7 +468,7 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5 group">
+        <div class="ml-14 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div
                 class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
@@ -394,7 +506,7 @@
             </div>
         </div>
 
-        <div class="ml-14 group">
+        <div class="ml-14 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div
                 class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
@@ -432,7 +544,7 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5 group">
+        <div class="ml-14 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div
                 class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
@@ -470,7 +582,7 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5 group">
+        <div class="ml-14 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div
                 class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
@@ -508,7 +620,7 @@
             </div>
         </div>
 
-        <div class="ml-14 -mr-5 group">
+        <div class="ml-14 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div
                 class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
@@ -546,7 +658,7 @@
             </div>
         </div>
 
-        <div class="ml-14 group">
+        <div class="ml-14 -mr-5 group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 px-2 mb-4">
             <div
                 class="relative bg-white rounded-lg shadow-md border-gray-200 border-2 transition-shadow duration-300 hover:shadow-2xl hover:shadow-gray-400">
                 <div class="relative group w-full h-48 overflow-hidden">
@@ -585,12 +697,12 @@
         </div>
 </section>
 
-<div class="flex justify-center items-center mb-12 mt-6">
+<div class="flex justify-center items-center mb-12">
     <button class="btn mt-10 px-7 py-3 border-2 border-blue-700 rounded-full text-blue-700 pr-14 pl-14 hover:bg-blue-700 hover:text-white transition ease-in-out duration-200">View All Courses</button>
 </div>
 
-<div class="relative bg-cover bg-center h-screen flex items-center justify-center"
-    style="background-image: url('./assets/home1.jpg');">
+<div class="relative bg-cover bg-center bg-fixed h-[75vh] flex items-center justify-center"
+    style="background-image: url('./assets/home.jpg');">
     <!-- Dark Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-80"></div>
 
@@ -599,49 +711,39 @@
         <h2 class="text-4xl font-bold mb-4">Scholl Achievements</h2>
         <p class="mb-8">Here you can review some statistics about our Education Center</p>
 
-        <div class="flex justify-between items-center space-x-56 pt-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:space-x-32 lg:pt-20">
             <!-- Icon 1 -->
-            <div class="text-center">
-                <i class="fas fa-user-graduate text-5xl mb-2"></i>
-                <h3 class="text-2xl font-semibold counter" data-count="65000000" data-original="65m+">0</h3>
+            <div class="text-center mb-8 lg:mb-0">
+                <i class="fas fa-user-graduate text-7xl mb-2"></i>
+                <h3 class="text-3xl font-semibold counter" data-count="65000000" data-original="65m+">0</h3>
                 <p>Students learning</p>
             </div>
 
             <!-- Icon 2 -->
-            <div class="text-center">
-                <i class="fas fa-graduation-cap text-5xl mb-2"></i>
-                <h3 class="text-2xl font-semibold counter" data-count="58263" data-original="58263">0</h3>
+            <div class="text-center pl-20 mb-8 lg:mb-0">
+                <i class="fas fa-graduation-cap text-7xl mb-2"></i>
+                <h3 class="text-3xl font-semibold counter" data-count="58263" data-original="58263">0</h3>
                 <p>Graduates</p>
             </div>
 
             <!-- Icon 3 -->
-            <div class="text-center">
-                <i class="fas fa-puzzle-piece text-5xl mb-2"></i>
-                <h3 class="text-2xl font-semibold counter" data-count="896673" data-original="896673">0</h3>
+            <div class="text-center pl-20 mb-8 lg:mb-0">
+                <i class="fas fa-puzzle-piece text-7xl mb-2"></i>
+                <h3 class="text-3xl font-semibold counter" data-count="896673" data-original="896673">0</h3>
                 <p>Free courses</p>
             </div>
 
             <!-- Icon 4 -->
-            <div class="text-center">
-                <i class="fas fa-chalkboard-teacher text-5xl mb-2"></i>
-                <h3 class="text-2xl font-semibold counter" data-count="8570" data-original="8570">0</h3>
+            <div class="text-center pl-20">
+                <i class="fas fa-chalkboard-teacher text-7xl mb-2"></i>
+                <h3 class="text-3xl font-semibold counter" data-count="8570" data-original="8570">0</h3>
                 <p>Active courses</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Include jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Include CounterUp.js -->
-<script src="https://cdn.jsdelivr.net/npm/counterup2@1.0.7/dist/index.min.js"></script>
-
-<!-- Include custom JS file -->
-<script src="count.js"></script>
-
-
-<!-- New Content for Top Courses Section -->
 <div class="flex justify-center flex-col items-center mt-14">
     <h2 class="text-black text-2xl mb-4 font-bold">Upcoming Events</h2>
     <p class="text-grey mb-14">Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
@@ -788,8 +890,6 @@
         <span class="dot h-4 w-4 mt-4 bg-gray-400 rounded-full cursor-pointer" onclick="currentSlide(1)"></span>
     </div>
 </div>
-
-<script src="./slider.js"></script>
 
 <div class="bg-blue-900 text-white">
     <div class="flex justify-center flex-col items-center pt-8 pb-28">
@@ -1098,12 +1198,12 @@
                 </div>
 
                 <!-- Swiper Navigation -->
-                <div class="swiper-button-next text-gray-700">
-                    <button class="bg-white px-6 py-3 hover:bg-blue-800"> <i class="fa-solid fa-arrow-right text-blue-700 hover:text-white"></i></button>
+                <div class="swiper-button-next text-gray-700 group">
+                    <button class="bg-white px-6 py-3 group-hover:bg-blue-800"> <i class="fa-solid fa-arrow-right text-blue-700 group-hover:text-white"></i></button>
                 </div>
 
-                <div class="swiper-button-prev text-gray-700">
-                    <button class="bg-white px-6 py-3 hover:bg-blue-800"> <i class="fa-solid fa-arrow-left text-blue-700 hover:text-white"></i></button>
+                <div class="swiper-button-prev text-gray-700 group">
+                    <button class="bg-white px-6 py-3 group-hover:bg-blue-800"> <i class="fa-solid fa-arrow-left text-blue-700 group-hover:text-white"></i></button>
                 </div>
                 
             </div>
@@ -1111,175 +1211,169 @@
     </div>
 </div>
 
-<script>
-    const swiper = new Swiper('.mySwiper', {
-        slidesPerView: 5,    // Show 5 slides at a time
-        spaceBetween: 1,    // Adjust spacing between slides
-        loop: true,          // Enable looping
-        loopFillGroupWithBlank: true,  // Prevent empty spaces when looped
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        
-    });
-</script>
-
-<div class="bg-white py-6 -mt-10 ">
-    <div class="max-w-6xl mx-auto text-center">
+<div class="bg-white py-6 -mt-10">
+    <div class="max-w-[120rem] max-h-[100rem] mx-auto text-center">
         <!-- Title -->
-        <h2 class="text-3xl font-bold mb-4">What People Say</h2>
-        <p class="text-gray-500 mb-16">Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        <h2 class="text-3xl font-bold mb-4 mt-14">What People Say</h2>
+        <p class="text-gray-500 mb-16">
+            Cum doctus civibus efficiantur in imperdiet deterruisset.
+        </p>
 
-    <!-- Testimonial Slider Container -->
-    <div id="testimonialSliderContainer" class="relative overflow-hidden">
-        <div id="testimonialSlider" class="flex transition-transform duration-500">
-            <!-- Slide 1 -->
-            <div class="flex-none w-full sm:w-1/3 px-4">
-                <!-- Testimonial 1 -->
-                <div class="flex flex-col items-center">
-                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                        <p class="text-gray-700">It was really fun getting to know the team during the project...</p>
+        <!-- Testimonial Slider Container -->
+        <div class="swiper-container swiper2">
+            <div class="swiper-wrapper flex">
+                <!-- Slide 1 -->
+                <div class="swiper-slide flex-none w-full sm:w-1/3 px-4">
+                    <!-- Testimonial 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="relative bg-white text-left shadow-lg rounded-lg testimonial-text">
+                            <div class="text-6xl text-gray-200 absolute top-0 left-0 ml-9 mt-6">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 absolute top-10 ml-32 text-lg">
+                                It was really fun getting to know the team <br />
+                                during the project. They were all helpful in <br />
+                                answering my questions and made me feel <br />
+                                completely at ease. The design ended up <br />
+                                being twice as good as I could have ever <br />envisioned!
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <img class="w-16 h-16 rounded-full mx-auto" src="./assets/profile1.jpg" alt="Aura Brooks" />
+                            <h3 class="mt-2 text-lg font-semibold">Aura Brooks</h3>
+                            <p class="text-blue-500">
+                                <a href="#">Graphic Designer, Owl Eyes</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="mt-6">
-                        <img class="w-16 h-16 rounded-full mx-auto" src="profile1.jpg" alt="Aura Brooks">
-                        <h3 class="mt-2 text-lg font-semibold">Aura Brooks</h3>
-                        <p class="text-blue-500"><a href="#">Graphic Designer, Owl Eyes</a></p>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide flex-none w-full sm:w-1/3 px-4">
+                    <!-- Testimonial 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="relative bg-white text-left shadow-lg rounded-lg testimonial-text">
+                            <div class="text-6xl text-gray-200 absolute top-0 left-0 ml-9 mt-6">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 absolute top-10 ml-32 text-lg">
+                                It was really fun getting to know the team <br />
+                                during the project. They were all helpful in <br />
+                                answering my questions and made me feel <br />
+                                completely at ease. The design ended up <br />
+                                being twice as good as I could have ever <br />envisioned!
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <img class="w-16 h-16 rounded-full mx-auto" src="./assets/profile1.jpg" alt="Ali Tufan" />
+                            <h3 class="mt-2 text-lg font-semibold">Ali Tufan</h3>
+                            <p class="text-blue-500">
+                                <a href="#">Client</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide flex-none w-full sm:w-1/3 px-4 pb-6">
+                    <!-- Testimonial 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="relative bg-white text-left shadow-lg rounded-lg testimonial-text">
+                            <div class="text-6xl text-gray-200 absolute top-0 left-0 ml-9 mt-6">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 absolute top-10 ml-32 text-lg">
+                                It was really fun getting to know the team <br />
+                                during the project. They were all helpful in <br />
+                                answering my questions and made me feel <br />
+                                completely at ease. The design ended up <br />
+                                being twice as good as I could have ever <br />envisioned!
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <img class="w-16 h-16 rounded-full mx-auto" src="./assets/profile1.jpg" alt="Jack Graham" />
+                            <h3 class="mt-2 text-lg font-semibold">Jack Graham</h3>
+                            <p class="text-blue-500">
+                                <a href="#">Co-founder, Coffee Inc</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide flex-none w-full sm:w-1/3 px-4">
+                    <!-- Testimonial 4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="relative bg-white text-left shadow-lg rounded-lg testimonial-text">
+                            <div class="text-6xl text-gray-200 absolute top-0 left-0 ml-9 mt-6">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 absolute top-10 ml-32 text-lg">
+                                It was really fun getting to know the team <br />
+                                during the project. They were all helpful in <br />
+                                answering my questions and made me feel <br />
+                                completely at ease. The design ended up <br />
+                                being twice as good as I could have ever <br />envisioned!
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <img class="w-16 h-16 rounded-full mx-auto" src="./assets/profile1.jpg" alt="Ali Tufan" />
+                            <h3 class="mt-2 text-lg font-semibold">Ali Tufan</h3>
+                            <p class="text-blue-500">
+                                <a href="#">Client</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide flex-none w-full sm:w-1/3 px-4">
+                    <!-- Testimonial 5 -->
+                    <div class="flex flex-col items-center">
+                        <div class="relative bg-white text-left shadow-lg rounded-lg testimonial-text">
+                            <div class="text-6xl text-gray-200 absolute top-0 left-0 ml-9 mt-6">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <p class="text-gray-700 absolute top-10 ml-32 text-lg">
+                                It was really fun getting to know the team <br />
+                                during the project. They were all helpful in <br />
+                                answering my questions and made me feel <br />
+                                completely at ease. The design ended up <br />
+                                being twice as good as I could have ever <br />envisioned!
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <img class="w-16 h-16 rounded-full mx-auto" src="./assets/profile1.jpg" alt="Jack Graham" />
+                            <h3 class="mt-2 text-lg font-semibold">Jack Graham</h3>
+                            <p class="text-blue-500">
+                                <a href="#">Co-founder, Coffee Inc</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Slide 2 -->
-            <div class="flex-none w-full sm:w-1/3 px-4">
-                <!-- Testimonial 2 -->
-                <div class="flex flex-col items-center">
-                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                        <p class="text-gray-700">It was really fun getting to know the team during the project...</p>
-                    </div>
-                    <div class="mt-6">
-                        <img class="w-16 h-16 rounded-full mx-auto" src="profile2.jpg" alt="Ali Tufan">
-                        <h3 class="mt-2 text-lg font-semibold">Ali Tufan</h3>
-                        <p class="text-blue-500"><a href="#">Client</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="flex-none w-full sm:w-1/3 px-4">
-                <!-- Testimonial 3 -->
-                <div class="flex flex-col items-center">
-                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                        <p class="text-gray-700">It was really fun getting to know the team during the project...</p>
-                    </div>
-                    <div class="mt-6">
-                        <img class="w-16 h-16 rounded-full mx-auto" src="profile3.jpg" alt="Jack Graham">
-                        <h3 class="mt-2 text-lg font-semibold">Jack Graham</h3>
-                        <p class="text-blue-500"><a href="#">Co-founder, Coffee Inc</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 4 -->
-            <div class="flex-none w-full sm:w-1/3 px-4">
-                <!-- Testimonial 4 -->
-                <div class="flex flex-col items-center">
-                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                        <p class="text-gray-700">It was a pleasure to work with such a professional team...</p>
-                    </div>
-                    <div class="mt-6">
-                        <img class="w-16 h-16 rounded-full mx-auto" src="profile4.jpg" alt="Jane Doe">
-                        <h3 class="mt-2 text-lg font-semibold">Jane Doe</h3>
-                        <p class="text-blue-500"><a href="#">Marketing Manager, XYZ Corp</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 5 -->
-            <div class="flex-none w-full sm:w-1/3 px-4">
-                <!-- Testimonial 5 -->
-                <div class="flex flex-col items-center">
-                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                        <p class="text-gray-700">Working with them was an incredible experience...</p>
-                    </div>
-                    <div class="mt-6">
-                        <img class="w-16 h-16 rounded-full mx-auto" src="profile5.jpg" alt="John Smith">
-                        <h3 class="mt-2 text-lg font-semibold">John Smith</h3>
-                        <p class="text-blue-500"><a href="#">CEO, ABC Ltd</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 6 -->
-            <div class="flex-none w-full sm:w-1/3 px-4">
-                <!-- Testimonial 6 -->
-                <div class="flex flex-col items-center">
-                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                        <p class="text-gray-700">Their creativity and dedication really shined through...</p>
-                    </div>
-                    <div class="mt-6">
-                        <img class="w-16 h-16 rounded-full mx-auto" src="profile6.jpg" alt="Emily White">
-                        <h3 class="mt-2 text-lg font-semibold">Emily White</h3>
-                        <p class="text-blue-500"><a href="#">Product Manager, Beta Inc</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 7 -->
-            <div class="flex-none w-full sm:w-1/3 px-4">
-                <!-- Testimonial 7 -->
-                <div class="flex flex-col items-center">
-                    <div class="relative bg-white text-left p-8 shadow-lg rounded-lg">
-                        <div class="text-6xl text-gray-200 absolute top-0 left-0 -ml-2 -mt-2">“</div>
-                        <p class="text-gray-700">Their innovative approach and attention to detail were exceptional...</p>
-                    </div>
-                    <div class="mt-6">
-                        <img class="w-16 h-16 rounded-full mx-auto" src="profile7.jpg" alt="Alex Johnson">
-                        <h3 class="mt-2 text-lg font-semibold">Alex Johnson</h3>
-                        <p class="text-blue-500"><a href="#">Lead Developer, Gamma Ltd</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            <!-- Slider Controls -->
-            <div class="flex justify-center mt-8 space-x-2">
-                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(0)"></button>
-                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(1)"></button>
-                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(2)"></button>
-                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(3)"></button>
-                <button class="dot w-4 h-4 bg-gray-400 rounded-full focus:outline-none" onclick="currentSlide2(4)"></button>
-                
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-gray-50 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col sm:flex-row gap-8">
-
-            <!-- Card 1 -->
-            <div class="flex-1 bg-white p-8 shadow-lg rounded-lg">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Become an Instructor</h3>
-                <p class="text-gray-500 mb-6">Teach what you love. Dove School gives you the tools to create an online
-                    course.</p>
-                <button
-                    class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">
-                    Start Teaching &rarr;
-                    </a>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="flex-1 bg-white p-8 shadow-lg rounded-lg">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Dove School For Business</h3>
-                <p class="text-gray-500 mb-6">Get unlimited access to 2,500 of Udemy’s top courses for your team.</p>
-                <button
-                    class="inline-block bg-gray-800 text-white font-semibold py-2 px-4 rounded-md hover:bg-gray-900 transition duration-300 mt-6">
-                    Doing Business &rarr;
-                </button>
-            </div>
-
+            <div class="swiper-pagination h-2 w-2"></div>
         </div>
     </div>
+
+    <div class="c1 mr-[50rem] mt-24 bg-stone-100 pt-16 pb-16 pl-16">
+    
+        <h2 class="text-2xl ml-32 text-black font-bold">Become an instructor</h2>
+        <p class="mt-5 ml-32 text-gray-500">Teach what you love. Dove Schooll gives you the tools to create an <br>
+            online course.</p>
+        <button
+            class="bg-blue-600 text-white p-4 rounded-lg mt-5 pl-10 pr-10 ml-32 hover:bg-white border-2 border-blue-600 hover:text-blue-600 transition ease-in">Start
+            Teaching &rarr;</button>
+    
+    </div>
+    
+    <div class="c2 -mt-[308px] abolute text-right  bg-stone-100 ml-[50rem] pb-16">
+    
+        <h2 class="text-2xl text-black mr-32 pt-16 font-bold">Dove School For Business</h2>
+        <p class="mt-5 mr-32 text-gray-500">Get unlimited access to 2,500 of Udemy’s top courses for <br>
+            your team.</p>
+        <button
+            class="bg-[#051925] text-white p-4 rounded-lg mt-5 pl-10 pr-10 mr-32 hover:bg-white border-2 border-[#051925] hover:text-[#051925] transition ease-in">Doing
+            Business &rarr;</button>
+    
+    </div>
+
 </div>
 
 <section class="footer-one bg-gray py-14">
@@ -1301,7 +1395,7 @@
                         <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">About Us</a></li>
                         <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Blog</a></li>
                         <li><a href="page-contact.html" class="hover:ml-2 hover:text-white ease-in-out duration-500">Contact</a></li>
-                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Become a tea</a></li>
+                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Become a Teacher</a></li>
                     </ul>
                 </div>
             </div>
@@ -1320,10 +1414,10 @@
                 <div class="footer-support pr-10">
                     <h4 class="text-2xl  mb-4 text-white">SUPPORT</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Documentati</a></li>
+                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Documentation</a></li>
                         <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Forums</a></li>
-                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Language</a></li>
-                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Release Stat</a></li>
+                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Language Packs</a></li>
+                        <li><a href="#" class="hover:ml-2 hover:text-white ease-in-out duration-500">Release Status</a></li>
                     </ul>
                 </div>
             </div>
@@ -1332,7 +1426,7 @@
                 <div class="space-y-4">
 
                     <button
-                        class="group flex items-center bg-black pr-16 pt-3 pb-3 pl-3 rounded hover:bg-blue-700 transition ease-in-out duration-200">
+                        class="group flex items-center bg-black pr-16 pt-3 pb-3 pl-3 rounded hover:bg-blue-700 transition ease-in-out duration-300">
                         <i class="fab fa-apple text-4xl mr-3 -mt-2 group-hover:text-white"></i>
                         <div>
                             <span class="text-sm text-white mr-24 ml-3">App Store</span>
@@ -1341,7 +1435,7 @@
                         </div>
                     </button>
                     <button
-                        class="group flex items-center bg-black  pr-14 pt-3 pb-3 pl-3 rounded hover:bg-blue-700 transition ease-in-out duration-200">
+                        class="group flex items-center bg-black  pr-14 pt-3 pb-3 pl-3 rounded hover:bg-blue-700 transition ease-in-out duration-300">
                         <i class="fab fa-google-play text-3xl mr-3 group-hover:text-white"></i>
                         <div>
                             <span class="text-sm text-white mr-24">Google Play</span>
@@ -1407,13 +1501,115 @@
         </div>
 
         <!-- Back to Top Button -->
-        <a href="#" class="hidden md:block text-gray-400 hover:text-white">
-            <i class="fas fa-arrow-up"></i>
+        <a href="#top" id="back-to-top"
+            class="fixed bottom-4 right-4 text-white">
+            <i class="fas fa-arrow-up text-2xl"></i>
         </a>
+
+
     </div>
 </section>
 
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<!-- Include CounterUp.js -->
+<script src="https://cdn.jsdelivr.net/npm/counterup2@1.0.7/dist/index.min.js"></script>
+
+<!-- Include custom JS file -->
+<script src="count.js"></script>
+
+<script src="./slider.js"></script>
+
+<script>
+    // Get the button
+    const backToTopButton = document.getElementById('back-to-top');
+
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) { // Show button after scrolling down 300px
+            backToTopButton.classList.remove('hidden');
+        } else {
+            backToTopButton.classList.add('hidden');
+        }
+    });
+
+    // Smooth scroll to top when button is clicked
+    backToTopButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+   document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.myNewSwiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    // Remove animation classes from all slides
+                    document.querySelectorAll('.swiper-slide .fade-in-up').forEach(el => {
+                        el.classList.remove('fade-in-up', 'fade-in-up-delay-500', 'fade-in-up-delay-1000');
+                    });
+
+                    // Re-add animation classes to the active slide
+                    let activeSlide = swiper.slides[swiper.activeIndex];
+                    let p1 = activeSlide.querySelector('p.text-6xl');
+                    let p2 = activeSlide.querySelector('p.text-xl');
+                    let button = activeSlide.querySelector('button');
+
+                    if (p1) p1.classList.add('fade-in-up');
+                    if (p2) p2.classList.add('fade-in-up', 'fade-in-up-delay-500');
+                    if (button) button.classList.add('fade-in-up', 'fade-in-up-delay-1000');
+                }
+            }
+        });
+    });
+
+
+    const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 5, // Show 5 slides at a time
+            spaceBetween: 1, // Adjust spacing between slides
+            loop: true, // Enable looping
+            loopFillGroupWithBlank: true, // Prevent empty spaces when looped
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+
+        const swiper2 = new Swiper('.swiper2', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                loop: true,
+                centeredSlides: true,
+                pagination: {
+                    el: '.swiper-pagination ',
+                    clickable: true,
+
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+</script>
         
 </body>
 </html>

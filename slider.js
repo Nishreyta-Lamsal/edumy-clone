@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Slider 1 - Main Image Slider
-    function initializeSlider1() {
+        document.addEventListener("DOMContentLoaded", function() {
+        function initializeSlider1() {
         let slideIndex1 = 0;
         const slides1 = document.querySelector("#slider #slides");
         const dots1 = document.querySelectorAll("#slider .dot");
@@ -35,44 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         showSlides1();
     }
-
-    // Slider 2 - Testimonial Slider
-    function initializeSlider2() {
-        let slideIndex2 = 0;
-        const slides2 = document.querySelector("#testimonialSlider");
-        const testimonialDots = document.querySelectorAll("#testimonialSliderContainer .dot");
-        
-        if (!slides2) {
-            console.error("Slider element not found!");
-            return;
-        }
-
-        function currentSlide2(n) {
-            slideIndex2 = n;
-            updateSlides2();
-        }
-
-        function updateSlides2() {
-            const slideWidth2 = slides2.children[0].clientWidth;
-            slides2.style.transform = `translateX(${-slideIndex2 * slideWidth2}px)`;
-
-            testimonialDots.forEach((dot, index) => {
-                dot.classList.toggle("bg-gray-800", index === slideIndex2);
-                dot.classList.toggle("bg-gray-400", index !== slideIndex2);
-            });
-        }
-
-        testimonialDots.forEach((dot, index) => {
-            dot.addEventListener("click", () => currentSlide2(index));
-        });
-
-        // Initialize slides and dots based on the initial index
-        updateSlides2();
-    }
-
-    // Initialize both sliders after the DOM has loaded
+    // Initialize the slider after the DOM has loaded
     initializeSlider1();
-    initializeSlider2();
 });
 
 
